@@ -14,9 +14,3 @@ class Player
     "#{@name}: #{@lives}/3"
   end
 end
-
-# Debugging with puts
-player = Player.new("Alice")
-puts player # Check player initialization
-player.lose_life
-puts player # Check player's lives after losing one
