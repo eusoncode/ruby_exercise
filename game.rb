@@ -23,7 +23,6 @@ class Game
    # This method handles each player's turn
    def play_turn
     @question = Question.new
-    puts "Current player: #{@current_player}" # Debugging statement
     @question.ask_question(@current_player)
     answer = gets.chomp
 
@@ -37,7 +36,6 @@ class Game
   # Switch the current player after each turn
   def switch_player
     @current_player = (@current_player == @player1) ? @player2 : @player1
-    puts "Current player: #{@current_player}" # Debugging statement
   end
 
   # Check if the game is over
@@ -58,9 +56,3 @@ class Game
     puts 'Good bye!'
   end
 end
-
-# Debugging with puts
-player = Player.new("Alice")
-puts player # Check player initialization
-player.lose_life
-puts player # Check player's lives after losing one
